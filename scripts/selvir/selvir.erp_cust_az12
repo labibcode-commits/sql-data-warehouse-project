@@ -1,0 +1,26 @@
+INSERT INTO selvir.erp_cust_az12(
+    CID,
+    BDATE,
+    GEN
+
+)
+SELECT 
+
+CASE 
+    WHEN cid like'NAS%' THEN  SUBSTRING(cid,4,len(cid))
+    ELSE  cid
+END as cid,
+
+CASE 
+    WHEN bdate>getdate() THEN  null
+    ELSE  bdate
+END as BDATE,
+
+
+CASE 
+    WHEN gen ='F' THEN  'Female'
+    when gen = 'M' then 'Male'
+    when gen is null or gen ='' then 'none'
+    ELSE  gen
+END as gen
+from bronze.erp_cust_az12
