@@ -166,8 +166,8 @@ from bronze.erp_loc_a101;
 
 
 print '===================================';
-print '>>Truncate the table : selvir.erp_loc_a101 ';
-TRUNCATE TABLE selvir.erp_loc_a101;
+print '>>Truncate the table : selvir.erp_px_cat_g1v2 ';
+TRUNCATE TABLE selvir.erp_px_cat_g1v2;
 print '===================================';
 
 INSERT into selvir.erp_px_cat_g1v2(
